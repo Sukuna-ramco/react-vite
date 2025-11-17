@@ -1,0 +1,93 @@
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('/images/login-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+/* dim overlay so form is readable */
+.login-page::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.login-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  gap: 24px;
+  z-index: 1; /* above overlay */
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+  border-radius: 10px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.03);
+}
+
+/* left: carousel */
+.login-left {
+  flex: 1.2;
+  min-width: 320px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* right: form */
+.login-right {
+  flex: 0.9;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-box {
+  padding: 32px;
+  width: 100%;
+  max-width: 360px;
+  box-sizing: border-box;
+  text-align: left;
+  border-radius: 0; /* inner box is flush with wrapper */
+}
+
+.login-title {
+  margin: 0 0 18px 0;
+  font-size: 1.4rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* small helpers for form spacing */
+.login-box form > * {
+  margin-bottom: 12px;
+}
+
+/* error message */
+.error {
+  color: #e53935;
+  font-size: 0.875rem;
+}
+
+/* responsive: stack carousel above form on small screens */
+@media (max-width: 820px) {
+  .login-wrapper {
+    flex-direction: column;
+  }
+  .login-left, .login-right {
+    min-width: auto;
+    width: 100%;
+  }
+  .login-page::before { background: rgba(0,0,0,0.25); }
+}
