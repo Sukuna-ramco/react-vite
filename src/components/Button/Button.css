@@ -1,0 +1,94 @@
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  border: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+/* Variants (contained default) */
+.btn--primary.btn--contained {
+  background-color: #3b82f6;
+  color: #ffffff;
+}
+.btn--primary.btn--contained:hover { 
+    background-color: #2563eb; 
+}
+
+.btn--secondary.btn--contained {
+  background-color: #6b7280; 
+  color: #ffffff;
+}
+.btn--secondary.btn--contained:hover { 
+    background-color: #4b5563; 
+}
+
+.btn--warning.btn--contained {
+  background-color: #f97316; 
+  color: #ffffff;
+}
+.btn--warning.btn--contained:hover { 
+    background-color: #ea580c; 
+}
+
+/* Outlined type */
+.btn--outlined {
+  background: transparent;
+  border: 2px solid currentColor;
+}
+
+/* For outlined we want the text color to match the variant color */
+.btn--primary.btn--outlined {
+  color: #3b82f6;
+  border-color: #3b82f6;
+}
+.btn--primary.btn--outlined:hover {
+  background: #ffffff;
+}
+.btn--secondary.btn--outlined {
+  color: #6b7280;
+  border-color: #6b7280;
+}
+.btn--secondary.btn--outlined:hover {
+  background: #ffffff;
+}
+
+.btn--warning.btn--outlined {
+  color: #f97316;
+  border-color: #f97316;
+}
+.btn--warning.btn--outlined:hover {
+  background: #ffffff;
+}
+
+/* Text type */
+.btn--text {
+  background: transparent;
+  border: 0;
+}
+.btn--primary.btn--text { 
+    color: #3b82f6; 
+}
+.btn--secondary.btn--text { 
+    color: #6b7280; 
+}
+.btn--warning.btn--text { 
+    color: #f97316; 
+}
+
+.btn--disabled,
+.btn[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* optional utility class if you pass full width via className */
+.btn--full {
+  width: 100%;
+}

@@ -1,0 +1,38 @@
+.textbox {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.textbox-label {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.textbox-required {
+  color: #e53935;
+  margin-left: 4px;
+}
+
+.textbox-input {
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.textbox-input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.08);
+}
+
+.textbox-input--error {
+  border-color: #e53935;
+}
+
+.textbox-error {
+  color: #e53935;
+  font-size: 0.85rem;
+}
