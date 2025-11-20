@@ -14,8 +14,8 @@ const sidebarItems: SidebarItem[] = [
   { id: 'dashboard', icon: 'dashboard', label: 'Dashboard', path: '/' },
   { id: 'history', icon: 'history', label: 'History', path: '/history' },
   { id: 'settings', icon: 'settings', label: 'Settings', path: '/settings' },
-  { id: 'notifications', icon: 'notifications', label: 'Notifications', path: '/notifications' },
-  { id: 'profile', icon: 'profile', label: 'Profile', path: '/profile' },
+  { id: 'profile', icon: 'profile', label: 'Profile', path: '/profile' }, 
+  { id: 'logout', icon: 'logout', label: 'Logout', path: '/logout' }
 ];
 
 const Sidebar: React.FC = () => {

@@ -6,12 +6,18 @@ const products = [
   { id: 2, name: 'Product B', price: '$49', img: '/images/product-2.jpg' },
   { id: 3, name: 'Product C', price: '$19', img: '/images/product-3.jpg' },
   { id: 4, name: 'Product D', price: '$99', img: '/images/product-4.jpg' },
+  { id: 5, name: 'Product E', price: '$59', img: '/images/product-5.jpg' },
+  { id: 6, name: 'Product F', price: '$39', img: '/images/product-6.jpg' },
+  { id: 7, name: 'Product G', price: '$79', img: '/images/product-7.jpg' },
+  { id: 8, name: 'Product H', price: '$289', img: '/images/product-8.jpg' },
+  { id: 9, name: 'Product I', price: '$24', img: '/images/product-9.jpg' },
+  { id: 10, name: 'Product J', price: '$44', img: '/images/product-10.jpg' },
 ];
 
 const Dashboard: React.FC = () => {
   return (
     <section>
-      <h2 style={{ marginBottom: 12 }}>Products</h2>
+      <h2 style={{ marginBottom: 12 }}>PRODUCTS</h2>
       <div style={{
         display: 'grid',
         gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',

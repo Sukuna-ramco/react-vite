@@ -2,23 +2,16 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 import Login from './pages/Login';
 import Profile from './pages/Profile/Profile';
-import MainLayout from './layouts/MainLayout';
+import MainLayout from './pages/layouts/MainLayout';
 import Dashboard from './pages/Dashboard/Dashboard';
 
 const AppRoutes: React.FC<{ isLoggedIn: boolean; setIsLoggedIn: (v: boolean) => void }> = ({ isLoggedIn, setIsLoggedIn }) => {
   const navigate = useNavigate();
 
-  useEffect(() => {
-    if (isLoggedIn) {
-      navigate('/', { replace: true });
-    } else {
-      navigate('/login', { replace: true });
-    }
-  }, [isLoggedIn, navigate]);
-
   const handleLogin = () => {
     localStorage.setItem('authToken', '1');
     setIsLoggedIn(true);
+    navigate('/', { replace: true }); 
   };
 
   const handleLogout = () => {
@@ -34,7 +27,8 @@ const AppRoutes: React.FC<{ isLoggedIn: boolean; setIsLoggedIn: (v: boolean) => 
         element={isLoggedIn ? <MainLayout onLogout={handleLogout} /> : <Navigate to="/login" replace />}
       >
         <Route index element={<Dashboard />} />
-        <Route path="profile" element={<Profile />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/logout" element={<Navigate to="/login" replace />} />
       </Route>
       <Route path="*" element={<Navigate to={isLoggedIn ? '/' : '/login'} replace />} />
     </Routes>

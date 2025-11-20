@@ -1,8 +1,8 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import Sidebar from '../components/Sidebar/Sidebar';
-import Header from '../components/Header/Header';
-import '../pages/Dashboard/Dashboard.css';
+import Sidebar from '../../components/Sidebar/Sidebar';
+import Header from '../../components/Header/Header';
+import '../Dashboard/Dashboard.css';
 
 interface MainLayoutProps {
   onLogout?: () => void;
